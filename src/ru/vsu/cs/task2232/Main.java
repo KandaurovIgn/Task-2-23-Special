@@ -15,7 +15,7 @@ public class Main {
         month = getMonth();
         day = getDay();
         dayOfWeek = getDayOfWeek(year, month, day);
-        dayWeekend = isDayWeekend(dayOfWeek, month, day);
+        dayWeekend = isDayWeekend(dayOfWeek);
         showDayStatus(year, month, day, dayWeekend);
     }
 
@@ -83,20 +83,8 @@ public class Main {
             System.out.print(" Work day");
     }
 
-    public static boolean isDayWeekend(int dayOfWeek, int month, int day) {
+    public static boolean isDayWeekend(int dayOfWeek) {
         if (dayOfWeek == 0 || dayOfWeek == 6)
-            return true;
-        if ((month == 1) && (day == 1 || day == 2 || day == 3 || day == 6 || day == 7 || day == 8))
-            return true;
-        if ((month == 2) && (day == 24))
-            return true;
-        if ((month == 3) && (day == 9))
-            return true;
-        if ((month == 5) && (day == 1 || day == 4 || day == 5 || day == 11))
-            return true;
-        if ((month == 6) && (day == 12))
-            return true;
-        if ((month == 11) && (day == 4))
             return true;
         else
             return false;

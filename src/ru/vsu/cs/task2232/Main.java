@@ -67,8 +67,7 @@ public class Main {
     public static boolean isDayWeekend(int dayOfWeek) {
         if (dayOfWeek == 0 || dayOfWeek == 6)
             return true;
-        else
-            return false;
+        return false;
     }
 
     public static int getDayOfWeek(int year, int month, int day) {
